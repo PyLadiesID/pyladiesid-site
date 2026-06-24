@@ -1,0 +1,25 @@
+body {
+    background-color: #2D1218;
+}
+.container {
+  position: relative;        /* Establishes positioning context for the background */
+  isolation: isolate;        /* Keeps the text on top of the negative z-index background */
+  width: 100%;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;                  /* Spans the background across the entire container */
+  z-index: -1;               /* Pushes the background behind the text content */
+  
+  /* Image and Repeat */
+  background-image: url('../images/pattern2.png');
+  background-repeat: repeat; /* Options: repeat, repeat-x, repeat-y */
+  
+  /* Custom Size */
+  /* background-size: 554px 445px; Sets width and height of individual pattern tiles */
+
+}
