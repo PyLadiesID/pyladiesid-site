@@ -1,6 +1,11 @@
 body {
     background-color: #2D1218;
+    background-image: url('../images/pattern2.png');
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
 }
+
 .container {
   position: relative;        /* Establishes positioning context for the background */
   isolation: isolate;        /* Keeps the text on top of the negative z-index background */
@@ -9,17 +14,191 @@ body {
   overflow: hidden;
 }
 
-.container::before {
+/* .container::before {
   content: "";
   position: absolute;
-  inset: 0;                  /* Spans the background across the entire container */
-  z-index: -1;               /* Pushes the background behind the text content */
-  
-  /* Image and Repeat */
+  inset: 0;                 
+  z-index: -1;              
   background-image: url('../images/pattern2.png');
-  background-repeat: repeat; /* Options: repeat, repeat-x, repeat-y */
-  
-  /* Custom Size */
-  /* background-size: 554px 445px; Sets width and height of individual pattern tiles */
+  background-repeat: repeat; 
+} */
 
+/* .navbar {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #8B2635; 
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 0 1px #C82333;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 35px 20px; 
+  font-family: sans-serif; 
+}
+
+ul li a:hover {
+  background-color: #C82333;
+}
+
+ul li img {
+  width: 60px;
+  display: block;
+  margin-left: 20px;
+}
+
+img[alt="My image"] {
+  width: 60px;
+  height: 60px;
+  top: 24px;
+  left: 23px;
+  opacity: 1;
+  transform: rotate(0deg); 
+  
+  display: block;
+} */
+.navbar {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #8B2635; 
+  box-shadow: inset 0 0 0 1px #C82333;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 30px; /* Jarak aman di ujung kiri & kanan navbar */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px; /* Menentukan tinggi navbar agar rapi secara vertikal */
+  box-sizing: border-box;
+}
+
+/* --- KUNCI UTAMA UNTUK LOGO (KIRI) --- */
+.nav-logo {
+  margin-right: auto; /* Mendorong menu di kanannya untuk mengambil sisa ruang */
+}
+
+.nav-logo a {
+  display: flex !important;
+  align-items: center;
+  gap: 10px; /* Jarak antara gambar logo dan teks herby kuning */
+  text-decoration: none;
+  padding: 15px 0;
+}
+
+/* --- KUNCI UTAMA UNTUK MENU TEKS (TENGAH) --- */
+.nav-item {
+  padding: 0 20px; /* Jarak antar menu teks (About Us, Program, dll) */
+}
+
+/* Trik khusus untuk item pertama dan terakhir dari menu tengah */
+/* Supaya memakan ruang yang sama rata di kiri & kanan, sehingga menu otomatis Center */
+.nav-item:nth-child(2) {
+  margin-left: auto; 
+}
+.nav-item:nth-child(5) {
+  margin-right: auto; 
+}
+
+.nav-item a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.nav-item a:hover {
+  opacity: 0.8;
+}
+
+.btn-join {
+  background-color: #C82333;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Detail Teks Logo */
+.logo-text {
+  font-family: sans-serif;
+  font-size: 22px; 
+  font-weight: bold;
+  line-height: 1; 
+}
+
+.text-pyladies {
+  color: #FFFFFF; 
+}
+
+.text-yellow {
+  color: #C8943B; 
+}
+
+.nav-logo a:hover {
+  background-color: transparent !important; 
+}
+
+/* 2. Beri margin-left auto pada tombol paling kanan agar terdorong penuh ke ujung kanan */
+.nav-button {
+  margin-left: auto;
+}
+
+/* --- Styling Tambahan untuk Link & Tombol --- */
+
+ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 25px 20px; 
+  font-family: sans-serif; 
+}
+
+ul li a:hover {
+  background-color: #C82333;
+}
+
+/* Styling Khusus Tombol Join Now agar mirip di gambar */
+.btn-join {
+  background-color: #C82333; /* Warna merah lebih terang */
+  padding: 10px 25px !important; /* Sesuaikan ukuran tombol */
+  border-radius: 20px; /* Membuat sudut membulat/capsule */
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Efek shadow halus di bawah tombol */
+  transition: background 0.3s ease;
+}
+
+.btn-join:hover {
+  background-color: #A71D2A;
+}
+
+ul li img {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0; /* Pastikan margin-left / margin-right nya 0 */
 }
