@@ -1,0 +1,17 @@
+  .batik-strip {
+    background: var(--red);
+    padding: 3px 0; overflow: hidden;
+  }
+  .batik-strip-inner {
+    display: flex; gap: 0;
+    animation: scrollBatik 20s linear infinite;
+    white-space: nowrap;
+  }
+  @keyframes scrollBatik { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .batik-strip-text {
+    display: inline-flex; align-items: center; gap: 2rem;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; color: rgba(255,255,255,0.8);
+    padding: 8px 2rem;
+  }
+  .batik-strip-text::after { content: '◆'; color: var(--gold-light); }

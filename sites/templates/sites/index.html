@@ -7,6 +7,9 @@
     <title>Pyladies Indonesia</title>
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
 	<link rel="stylesheet" href="{% static 'css/sections/hero.css' %}">
+  <link rel="stylesheet" href="{% static 'css/sections/strip.css' %}">
+  <link rel="stylesheet" href="{% static 'css/sections/about.css' %}">
+</head>
 	{% block css %}{% endblock %}
 </head>
 <body>
@@ -40,8 +43,13 @@
 		   {% include 'sites/sections/home.html' %}
       </section>
 
+      <section id="strip">
+          <!-- Batik Strip -->
+          {% include 'sites/sections/strip.html' %}
+      </section>
+
       <section id="about">
-          <!-- Tentang -->
+          {% include 'sites/sections/about.html' %}
       </section>
 
       <section id="program">
