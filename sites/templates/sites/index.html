@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="{% static 'css/sections/hero.css' %}">
   <link rel="stylesheet" href="{% static 'css/sections/strip.css' %}">
   <link rel="stylesheet" href="{% static 'css/sections/about.css' %}">
+  <link rel="stylesheet" href="{% static 'css/sections/footer.css' %}">
   <link rel="stylesheet" href="{% static 'css/sections/community.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -78,10 +79,72 @@
           <!-- Chapter -->
       </section>
 
+       <!-- Section Supported By -->
+       <section class="supported">
+        <h2>Supported by</h2>
+        <div class="support-list">
+            <span>PythonId</span>
+            <span>Bandung Py</span>
+            <span>PyLadies Global</span>
+            <span>Generation Girl</span>
+            <span>Python Software Foundation</span>
+        </div>
+      </section>
+
     </main>
 
-    <footer>
-        <!-- Footer -->
+    <!-- footer -->
+    <footer class="footer-container">
+      <!-- Top Section: Brand + Links -->
+      <div class="footer-top">
+        <!-- Brand / Logo Section -->
+        <div class="footer-brand">
+          <div class="brand-title">
+            <img src="{% static 'images/logo.png' %}" alt="PyLadies Logo" class="brand-logo" />
+            <h2>PyLadies <span>Indonesia</span></h2>
+          </div>
+          <p class="brand-description">
+            A mentor-led community in Indonesia dedicated to empowering women to thrive in the world of Python programming.
+          </p>
+        </div>
+    
+        <!-- Navigation Links -->
+        <div class="footer-links">
+          <div class="footer-col">
+            <h3>Program</h3>
+            <a href="#">Mentorship</a>
+            <a href="#">Workshop</a>
+            <a href="#">Connection</a>
+          </div>
+    
+          <div class="footer-col">
+            <h3>Chapter</h3>
+            <a href="#">Yogyakarta</a>
+            <a href="#">Bandung</a>
+            <a href="#">Jakarta</a>
+          </div>
+    
+          <div class="footer-col">
+            <h3>About Us</h3>
+            <a href="#">Blog</a>
+            <a href="#">Support</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div class="footer-ornament">
+          <img class="footer-ornament"
+          src="{% static 'images/ornament.png' %}"
+          alt="">
+        </div>
+      </div>
+  
+      <!-- Horizontal Divider -->
+      <div class="footer-divider"></div>
+    
+      <!-- Bottom Section: Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 PyLadies Indonesia</p>
+      </div>
     </footer>
 
 </body>
