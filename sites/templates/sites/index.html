@@ -5,16 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pyladies Indonesia</title>
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}" />
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
 	<link rel="stylesheet" href="{% static 'css/sections/hero.css' %}">
   <link rel="stylesheet" href="{% static 'css/sections/strip.css' %}">
   <link rel="stylesheet" href="{% static 'css/sections/about.css' %}">
+  <link rel="stylesheet" href="{% static 'css/sections/community.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 	{% block css %}{% endblock %}
 </head>
 <body>
     <header>
       <nav class="navbar">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-burger" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
         <ul>
           <li class="nav-logo">
             <a href="#">
@@ -56,8 +65,13 @@
           <!-- Program -->
       </section>
 
+      <section id="strip-yellow">
+          <!-- Marquee Strip Yellow -->
+          {% include 'sites/sections/strip-yellow.html' %}
+      </section>
+
       <section id="community">
-          <!-- Komunitas -->
+          {% include 'sites/sections/community.html' %}
       </section>
 
       <section id="chapter">
