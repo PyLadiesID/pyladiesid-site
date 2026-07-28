@@ -167,3 +167,35 @@ ul li img {
   display: block;
   margin: 0; /* Pastikan margin-left / margin-right nya 0 */
 }
+
+.supported {
+  background-color: #ffffff;
+  padding: 45px 8%;
+  text-align: center;
+  border-bottom: 5px solid #cfa343;
+}
+
+.supported h2 {
+  color: #A01C2B;
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+
+.support-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.support-list span {
+  color: #d8d8d8;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.support-list span:last-child {
+  flex-basis: 100%;
+}
