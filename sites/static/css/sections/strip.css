@@ -1,11 +1,29 @@
-  .batik-strip {
-    background: var(--red);
-    padding: 3px 0; overflow: hidden;
+.batik-strip {
+  background: var(--red);
+  padding: 3px 0;
+  overflow: hidden;
+}
+
+.strip {
+  background: var(--red);
+  padding: 3px 0;
+  overflow: hidden;
+}
+
+.batik-strip-inner {
+  display: flex;
+  gap: 0;
+  animation: scrollBatik 20s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes scrollBatik {
+  from {
+    transform: translateX(0);
   }
-  .batik-strip-inner {
-    display: flex; gap: 0;
-    animation: scrollBatik 20s linear infinite;
-    white-space: nowrap;
+
+  to {
+    transform: translateX(-50%);
   }
   @keyframes scrollBatik { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   .batik-strip-text {
