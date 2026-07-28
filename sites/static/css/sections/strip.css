@@ -15,3 +15,15 @@
     padding: 8px 2rem;
   }
   .batik-strip-text::after { content: '◆'; color: var(--gold-light); }
+
+  .strip-yellow {
+    overflow: hidden;
+    padding: 3px 0;
+  }
+  .batik-strip-text-black {
+    display: inline-flex; align-items: center; gap: 2rem;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; color: rgba(0,0,0,0.8);
+    padding: 8px 2rem;
+  }
+  .batik-strip-text-black::after { content: '◆'; color: var(--gold-light); }
