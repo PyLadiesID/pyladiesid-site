@@ -94,7 +94,7 @@
 
 /* Divider Line */
 .footer-divider {
-  width: 75%;
+  width: 90%;
   height: 1px;
   background-color: #ffffff;
   opacity: 80%;
@@ -115,4 +115,45 @@
   right: 25px;
   top: 14px;   
   width: 230px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 40px 24px 24px;
+  }
+  .footer-top {
+    flex-direction: column;
+    padding-right: 0;
+    gap: 30px;
+  }
+  .footer-brand {
+    max-width: 100%;
+  }
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 20px;
+  }
+  .footer-ornament {
+    display: none;
+  }
+  .footer-divider {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 32px 18px 20px;
+  }
+  .footer-links {
+    gap: 24px 70px;
+  }
+  .footer-col {
+    min-width: 0;
+  }
+  .footer-col a {
+    font-size: 0.8rem;
+  }
 }
