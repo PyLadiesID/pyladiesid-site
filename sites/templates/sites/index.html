@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="{% static 'css/sections/about.css' %}">
   <link rel="stylesheet" href="{% static 'css/sections/footer.css' %}">
   <link rel="stylesheet" href="{% static 'css/sections/community.css' %}">
+  <link rel="stylesheet" href="{% static 'css/sections/program.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 	{% block css %}{% endblock %}
@@ -37,10 +38,10 @@
           <li class="nav-item"><a href="#about">About Us</a></li>
           <li class="nav-item"><a href="#program">Program</a></li>
           <li class="nav-item"><a href="#community">Community</a></li>
-          <li class="nav-item"><a href="#chapter">Chapter</a></li>
+          <!-- <li class="nav-item"><a href="#chapter">Chapter</a></li> -->
 
           <li class="nav-button">
-            <a href="#" class="primary-btn">Join Now &rarr;</a>
+            <a href="https://www.instagram.com/pyladiesid/" class="primary-btn">Join Now &rarr;</a>
           </li>
         </ul>
       </nav>
@@ -63,7 +64,7 @@
       </section>
 
       <section id="program">
-          <!-- Program -->
+          {% include 'sites/sections/program.html' %}
       </section>
 
       <section id="strip-yellow">
@@ -83,10 +84,9 @@
        <section class="supported">
         <h2>Supported by</h2>
         <div class="support-list">
-            <span>PythonId</span>
-            <span>Bandung Py</span>
+            <span>PythonID</span>
+            <span>Bandung.Py</span>
             <span>PyLadies Global</span>
-            <span>Generation Girl</span>
             <span>Python Software Foundation</span>
         </div>
       </section>
@@ -112,23 +112,22 @@
         <div class="footer-links">
           <div class="footer-col">
             <h3>Program</h3>
-            <a href="#">Mentorship</a>
+            <a href="#">Empower Women in Tech</a>
             <a href="#">Workshop</a>
             <a href="#">Connection</a>
           </div>
     
           <div class="footer-col">
             <h3>Chapter</h3>
-            <a href="#">Yogyakarta</a>
-            <a href="#">Bandung</a>
-            <a href="#">Jakarta</a>
+            <a href="https://www.instagram.com/pyladies.yk">Yogyakarta</a>
+            <a href="https://www.instagram.com/pyladies.bdg">Bandung</a>
           </div>
     
           <div class="footer-col">
             <h3>About Us</h3>
             <a href="#">Blog</a>
             <a href="#">Support</a>
-            <a href="#">Contact</a>
+            <a href="mailto:indonesia@pyladies.com">Contact</a>
           </div>
         </div>
         <div class="footer-ornament">
