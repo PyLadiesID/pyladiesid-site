@@ -1,6 +1,7 @@
 {% load static %}
 <section class="about-container">
   
+  <!-- Kolom Kiri: Konten Teks -->
   <div class="about-content">
     <span class="about-badge">About Us</span>
     <h2 class="about-title">
@@ -12,11 +13,27 @@
     <p class="about-statement">
       We believe everyone deserves an equal opportunity to thrive in tech.
     </p>
-    <a href="#" class="btn-explore">Explore Our Programs &rarr;</a>
+    <a href="#program" class="btn-explore">Explore Our Programs &rarr;</a>
   </div>
 
+  <!-- Kolom Kanan: Card Chapter -->
   <div class="about-card-wrapper">
     <div class="chapter-card">
+      
+      <!-- Badge Atas Kanan -->
+      <div class="sticker-tag">
+        <span class="sticker-icon">✨</span>
+        <span class="sticker-text">Active Chapters</span>
+      </div>
+
+      <div class="chapter-floating-logo logo-left">
+        <img src="{% static 'images/pyladies-chapter/pyladies-bdg.png' %}" alt="PyLadies Badge Logo">
+      </div>
+
+      <div class="chapter-floating-logo logo-right">
+        <img src="{% static 'images/pyladies-chapter/pyladies-yk.png' %}" alt="PyLadies Logo 2">
+      </div>
+
       <div class="card-header">
         <span class="pin-icon">📍</span> 
         <h3><span class="text-gold">Chapter</span> PyLadies Indonesia</h3>
@@ -30,6 +47,7 @@
         <li>Bandung</li>
         <li>Yogyakarta</li>
       </ul>
+
     </div>
   </div>
 

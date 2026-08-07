@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="{% static 'css/sections/footer.css' %}">
   <link rel="stylesheet" href="{% static 'css/sections/community.css' %}">
   <link rel="stylesheet" href="{% static 'css/sections/program.css' %}">
+  <link rel="stylesheet" href="{% static 'css/sections/upcoming.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 	{% block css %}{% endblock %}
@@ -37,6 +38,7 @@
           </li>
           <li class="nav-item"><a href="#about">About Us</a></li>
           <li class="nav-item"><a href="#program">Program</a></li>
+          <li class="nav-item"><a href="#upcoming">Upcoming Projects</a></li>
           <li class="nav-item"><a href="#community">Community</a></li>
           <!-- <li class="nav-item"><a href="#chapter">Chapter</a></li> -->
 
@@ -72,6 +74,9 @@
           {% include 'sites/sections/strip-yellow.html' %}
       </section>
 
+      <section id="upcoming">
+          {% include 'sites/sections/upcoming.html' %}
+      </section>
       <section id="community">
           {% include 'sites/sections/community.html' %}
       </section>
@@ -81,15 +86,37 @@
       </section>
 
        <!-- Section Supported By -->
-       <section class="supported">
+<section class="supported">
+    <div class="supported-container">
         <h2>Supported by</h2>
+        
         <div class="support-list">
-            <span>PythonID</span>
-            <span>Bandung.Py</span>
-            <span>PyLadies Global</span>
-            <span>Python Software Foundation</span>
+            <!-- Item 1: PythonID -->
+            <div class="support-card">
+                <img src="{% static 'images/supported/pythonid.png' %}" alt="PythonID Logo">
+                <span>PythonID</span>
+            </div>
+
+            <!-- Item 2: Bandung.Py -->
+            <div class="support-card">
+                <img src="{% static 'images/supported/bandungpy.png' %}" alt="Bandung.Py Logo">
+                <span>Bandung.Py</span>
+            </div>
+
+            <!-- Item 3: PyLadies Global -->
+            <div class="support-card">
+                <img src="{% static 'images/supported/pyladies-global.png' %}" alt="PyLadies Global Logo">
+                <span>PyLadies Global</span>
+            </div>
+
+            <!-- Item 4: Python Software Foundation -->
+            <div class="support-card">
+                <img src="{% static 'images/supported/psf.jpg' %}" alt="Python Software Foundation Logo"> 
+                <span>Python Software Foundation</span>
+            </div>
         </div>
-      </section>
+    </div>
+</section>
 
     </main>
 

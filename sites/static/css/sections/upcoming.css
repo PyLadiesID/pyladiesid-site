@@ -1,0 +1,131 @@
+/* Section Utama */
+.upcoming {
+    background-color: #ffffff; /* Background putih bersih */
+    color: #1a1a1a;
+    padding: 80px 20px;
+    width: 100%;
+}
+
+/* Container 2 Kolom menyamping */
+.upcoming-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 kolom sejajar sama besar */
+    gap: 40px;
+    align-items: center; /* Menyejajarkan teks dan mockup secara vertikal */
+}
+
+/* --- KOLOM KIRI (Teks) --- */
+.upcoming-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #e24a4a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.eyebrow .line {
+    width: 30px;
+    height: 2px;
+    background-color: #e24a4a;
+}
+
+.upcoming-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #111111;
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+
+.upcoming-title .highlight {
+    color: #e24a4a;
+}
+
+.status-badge {
+    display: inline-block;
+    background-color: #fff1f1;
+    border: 1px solid #ffcdd2;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.status-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #d32f2f;
+}
+
+.upcoming-desc {
+    font-size: 1.05rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.feature-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: #333333;
+    font-weight: 500;
+}
+
+.pill i {
+    color: #e24a4a;
+}
+
+/* --- KOLOM KANAN (Mockup Gambar) --- */
+.upcoming-mockup-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.upcoming-mockup img {
+    width: 100%;
+    max-width: 550px; /* Batas lebar gambar */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08); /* Efek bayangan halus */
+    transition: transform 0.3s ease;
+}
+
+.upcoming-mockup img:hover {
+    transform: translateY(-4px); /* Efek hover naik sikit */
+}
+
+/* Responsive Layout untuk Layar Tablet/HP */
+@media (max-width: 992px) {
+    .upcoming-container {
+        grid-template-columns: 1fr; /* Jadi 1 kolom tumpuk ke bawah di layar kecil */
+        gap: 30px;
+    }
+
+    .upcoming-title {
+        font-size: 1.85rem;
+    }
+}
