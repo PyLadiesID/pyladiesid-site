@@ -1,4 +1,4 @@
-/* --- FIX UTAMA AGAR STICKY BERFUNGSI --- */
+/* --- GLOBAL RESET & BODY --- */
 html {
   overflow-x: hidden;
 }
@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  overflow-x: clip; /* Pengganti overflow-x: hidden agar sticky TIDAK MATI */
+  overflow-x: clip; /* Memastikan sticky navbar berfungsi tanpa bocor horizontal */
 }
 
 .container {
@@ -19,20 +19,16 @@ body {
   padding: 40px 20px;
 }
 
-/* --- NAVBAR STICKY & GLASSMORPHISM MODERN --- */
+/* --- NAVBAR STICKY --- */
 .navbar {
   margin: 0;
   padding: 0;
   width: 100%;
-  
-  /* Sticky Navbar Config */
   position: sticky;
   top: 0;
   z-index: 9999;
-
-  /* Modern Styling */
-  background-color: rgba(45, 18, 24, 0.85); /* Semi-transparan matching background */
-  backdrop-filter: blur(12px); /* Efek kaca blur halus saat di-scroll */
+  background-color: rgba(45, 18, 24, 0.85);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
@@ -44,20 +40,20 @@ body {
   display: none;
 }
 
-/* Flexbox Layout Utama */
-ul {
+/* Flexbox Layout Navbar */
+.navbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Otomatis membagi Logo - Menu Tengah - Tombol Kanan */
+  justify-content: space-between;
   width: 100%;
   height: 70px;
   box-sizing: border-box;
 }
 
-/* --- LOGO (KIRI) --- */
+/* Logo Navbar */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -75,61 +71,13 @@ ul {
   background-color: transparent !important;
 }
 
-ul li img {
+.nav-logo img {
   width: 44px;
   height: 44px;
   display: block;
   object-fit: contain;
 }
 
-.nav-item a {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  transition: opacity 0.2s;
-}
-
-.nav-item a:hover {
-  opacity: 0.8;
-}
-
-.subtitle-pink {
-  color: #e28f99;
-  font-size: 18px;
-  margin: 0 0 8px;
-  font-family: monospace;
-}
-
-.primary-btn {
-  background-color: #C82333;
-  color: #FFFFFF;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 10px 24px;
-  border-radius: 20px;
-  display: inline-block;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.default-btn {
-  background-color: #340E13;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 10px 24px;
-  border-radius: 20px;
-  display: inline-block;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Detail Teks Logo */
 .logo-text {
   font-size: 20px; 
   font-weight: 700;
@@ -142,10 +90,10 @@ ul li img {
 }
 
 .text-yellow {
-  color: #F3C649; /* Yellow mustard disempurnakan agar lebih cerah */
+  color: #F3C649;
 }
 
-/* --- MENU LINKS (TENGAH) --- */
+/* Menu Links (Tengah) */
 .nav-item {
   display: flex;
   align-items: center;
@@ -163,11 +111,11 @@ ul li img {
 
 .nav-item a:hover {
   color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.08); /* Hover effect melayang halus */
+  background-color: rgba(255, 255, 255, 0.08);
   opacity: 1;
 }
 
-/* --- TOMBOL JOIN NOW (KANAN) --- */
+/* Tombol Primary & Join Now (Kanan) */
 .nav-button {
   display: flex;
   align-items: center;
@@ -181,7 +129,7 @@ ul li img {
   font-size: 14px;
   font-weight: 600;
   padding: 10px 22px !important;
-  border-radius: 50px; /* Bentuk kapsul pills modern */
+  border-radius: 50px;
   display: inline-block;
   box-shadow: 0 4px 12px rgba(200, 35, 51, 0.35);
   transition: all 0.2s ease;
@@ -194,12 +142,12 @@ ul li img {
   box-shadow: 0 6px 16px rgba(200, 35, 51, 0.5);
 }
 
-/* Section Supported Utama */
+/* --- SECTION SUPPORTED BY --- */
 .supported {
   background: linear-gradient(180deg, #ffffff 0%, #fdfbf7 100%);
   padding: 60px 20px;
   text-align: center;
-  border-bottom: 4px solid #cfa343; /* Accent garis emas/kuning */
+  border-bottom: 4px solid #cfa343;
 }
 
 .supported-container {
@@ -217,7 +165,6 @@ ul li img {
   display: inline-block;
 }
 
-/* Garis aksen kecil di bawah judul */
 .supported h2::after {
   content: "";
   display: block;
@@ -228,7 +175,6 @@ ul li img {
   border-radius: 2px;
 }
 
-/* Container Grid Logo/Card */
 .support-list {
   display: flex;
   justify-content: center;
@@ -238,7 +184,7 @@ ul li img {
   max-width: 1000px;
   margin: 0 auto;
 }
-/* Base Card untuk Logo / Teks Community */
+
 .support-card {
   background-color: #ffffff;
   border: 1px solid #eaeaea;
@@ -254,46 +200,42 @@ ul li img {
 }
 
 .support-card span {
-  color: #4a4a4a; /* Warna teks tidak lagi abu pudar, tapi lebih kontras & jelas */
+  color: #4a4a4a;
   font-size: 18px;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
-/* Ukuran untuk Logo Gambar jika nanti dimasukkan */
 .support-card img {
   max-height: 32px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(100%); /* Efek grayscale awal (opsional), menyala pas di hover */
+  filter: grayscale(100%);
   opacity: 0.7;
   transition: all 0.3s ease;
 }
 
-/* --- EFEK HOVER MENYALA (GLOW EFFECT) --- */
 .support-card:hover {
-  transform: translateY(-5px); /* Terangkat ke atas */
-  border-color: #c82333; /* Border berubah jadi merah PyLadies */
+  transform: translateY(-5px);
+  border-color: #c82333;
   background-color: #ffffff;
-  
-  /* Efek glow bercahaya di sekeliling card */
   box-shadow: 0 10px 25px rgba(200, 35, 51, 0.18),
               0 0 12px rgba(207, 163, 67, 0.25);
 }
 
 .support-card:hover span {
-  color: #8B2635; /* Teks berubah warna maroon saat di-hover */
+  color: #8B2635;
 }
 
 .support-card:hover img {
-  filter: grayscale(0%); /* Gambar kembali berwarna penuh */
+  filter: grayscale(0%);
   opacity: 1;
 }
 
 /* --- RESPONSIVE MOBILE MENU --- */
 @media (max-width: 768px) {
   .navbar {
-    position: sticky; /* Tetap sticky di mobile */
+    position: sticky;
     top: 0;
   }
 
@@ -320,7 +262,7 @@ ul li img {
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
-  ul {
+  .navbar ul {
     flex-direction: column;
     align-items: flex-start;
     height: auto;
@@ -362,13 +304,14 @@ ul li img {
     padding: 16px 24px 8px 24px;
   }
 
-  /* Hamburger to X Animation */
   .nav-toggle:checked ~ .nav-burger span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
+
   .nav-toggle:checked ~ .nav-burger span:nth-child(2) {
     opacity: 0;
   }
+
   .nav-toggle:checked ~ .nav-burger span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
