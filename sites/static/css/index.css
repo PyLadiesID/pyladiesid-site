@@ -1,15 +1,16 @@
-html, body {
+/* --- GLOBAL RESET & BODY --- */
+html {
   overflow-x: hidden;
 }
 
-
 body {
-    background-color: #2D1218;
-    background-image: url('../images/pattern2.png');
-    background-repeat: repeat;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  background-color: #2D1218;
+  background-image: url('../images/pattern2.png');
+  background-repeat: repeat;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: clip; /* Memastikan sticky navbar berfungsi tanpa bocor horizontal */
 }
 
 .container {
@@ -18,114 +19,70 @@ body {
   padding: 40px 20px;
 }
 
+/* --- NAVBAR STICKY --- */
 .navbar {
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: #8B2635; 
-  box-shadow: inset 0 0 0 1px #C82333;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: rgba(45, 18, 24, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
 }
 
-/* Burger toggle - hidden on desktop, shown on mobile */
-.nav-toggle {
-  display: none;
-}
+/* Burger Toggle */
+.nav-toggle,
 .nav-burger {
   display: none;
 }
 
-ul {
+/* Flexbox Layout Navbar */
+.navbar ul {
   list-style-type: none;
   margin: 0;
-  padding: 0 30px; /* Jarak aman di ujung kiri & kanan navbar */
+  padding: 0 40px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 70px; /* Menentukan tinggi navbar agar rapi secara vertikal */
+  height: 70px;
   box-sizing: border-box;
 }
 
-/* --- KUNCI UTAMA UNTUK LOGO (KIRI) --- */
+/* Logo Navbar */
 .nav-logo {
-  margin-right: auto; /* Mendorong menu di kanannya untuk mengambil sisa ruang */
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo a {
-  display: flex !important;
+  display: flex;
   align-items: center;
-  gap: 10px; /* Jarak antara gambar logo dan teks herby kuning */
+  gap: 12px;
   text-decoration: none;
-  padding: 15px 0;
+  padding: 0;
 }
 
-/* --- KUNCI UTAMA UNTUK MENU TEKS (TENGAH) --- */
-.nav-item {
-  padding: 0 20px; /* Jarak antar menu teks (About Us, Program, dll) */
+.nav-logo a:hover {
+  background-color: transparent !important;
 }
 
-/* Trik khusus untuk item pertama dan terakhir dari menu tengah */
-/* Supaya memakan ruang yang sama rata di kiri & kanan, sehingga menu otomatis Center */
-.nav-item:nth-child(2) {
-  margin-left: auto; 
-}
-.nav-item:nth-child(5) {
-  margin-right: auto; 
+.nav-logo img {
+  width: 44px;
+  height: 44px;
+  display: block;
+  object-fit: contain;
 }
 
-.nav-item a {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  transition: opacity 0.2s;
-}
-
-.nav-item a:hover {
-  opacity: 0.8;
-}
-
-.subtitle-pink {
-  color: #e28f99;
-  font-size: 18px;
-  margin: 0 0 8px;
-  font-family: monospace;
-}
-
-.primary-btn {
-  background-color: #C82333;
-  color: #FFFFFF;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 10px 24px;
-  border-radius: 20px;
-  display: inline-block;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.default-btn {
-  background-color: #340E13;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 10px 24px;
-  border-radius: 20px;
-  display: inline-block;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Detail Teks Logo */
 .logo-text {
-  font-family: sans-serif;
-  font-size: 22px; 
-  font-weight: bold;
+  font-size: 20px; 
+  font-weight: 700;
   line-height: 1; 
+  letter-spacing: -0.3px;
 }
 
 .text-pyladies {
@@ -133,94 +90,155 @@ ul {
 }
 
 .text-yellow {
-  color: #C8943B; 
+  color: #F3C649;
 }
 
-.text-red {
-  color: #C82333; 
+/* Menu Links (Tengah) */
+.nav-item {
+  display: flex;
+  align-items: center;
 }
 
-.nav-logo a:hover {
-  background-color: transparent !important; 
-}
-
-/* 2. Beri margin-left auto pada tombol paling kanan agar terdorong penuh ke ujung kanan */
-.nav-button {
-  margin-left: auto;
-}
-
-/* --- Styling Tambahan untuk Link & Tombol --- */
-
-ul li a {
-  display: block;
-  color: white;
+.nav-item a {
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  padding: 25px 20px; 
-  font-family: sans-serif; 
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
-ul li a:hover {
-  background-color: #C82333;
+.nav-item a:hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.08);
+  opacity: 1;
 }
 
-/* Styling Khusus Tombol Join Now agar mirip di gambar */
+/* Tombol Primary & Join Now (Kanan) */
+.nav-button {
+  display: flex;
+  align-items: center;
+}
+
+.primary-btn,
 .btn-join {
-  background-color: #C82333; /* Warna merah lebih terang */
-  padding: 10px 25px !important; /* Sesuaikan ukuran tombol */
-  border-radius: 20px; /* Membuat sudut membulat/capsule */
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Efek shadow halus di bawah tombol */
-  transition: background 0.3s ease;
+  background-color: #C82333;
+  color: #FFFFFF !important;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 22px !important;
+  border-radius: 50px;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(200, 35, 51, 0.35);
+  transition: all 0.2s ease;
 }
 
+.primary-btn:hover,
 .btn-join:hover {
-  background-color: #A71D2A;
+  background-color: #e02638 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(200, 35, 51, 0.5);
 }
 
-ul li img {
-  width: 60px;
-  height: 60px;
-  display: block;
-  margin: 0; /* Pastikan margin-left / margin-right nya 0 */
-}
-
+/* --- SECTION SUPPORTED BY --- */
 .supported {
-  background-color: #ffffff;
-  padding: 45px 8%;
+  background: linear-gradient(180deg, #ffffff 0%, #fdfbf7 100%);
+  padding: 60px 20px;
   text-align: center;
-  border-bottom: 5px solid #cfa343;
+  border-bottom: 4px solid #cfa343;
+}
+
+.supported-container {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .supported h2 {
-  color: #A01C2B;
-  font-size: 26px;
-  margin-bottom: 40px;
+  color: #8B2635;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 36px;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.supported h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #cfa343;
+  margin: 8px auto 0;
+  border-radius: 2px;
 }
 
 .support-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
-  max-width: 900px;
-  margin: auto;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.support-list span {
-  color: #d8d8d8;
-  font-size: 24px;
-  font-weight: 700;
+.support-card {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  padding: 16px 28px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.support-list span:last-child {
-  flex-basis: 100%;
+.support-card span {
+  color: #4a4a4a;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
+
+.support-card img {
+  max-height: 32px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.support-card:hover {
+  transform: translateY(-5px);
+  border-color: #c82333;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(200, 35, 51, 0.18),
+              0 0 12px rgba(207, 163, 67, 0.25);
+}
+
+.support-card:hover span {
+  color: #8B2635;
+}
+
+.support-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* --- RESPONSIVE MOBILE MENU --- */
 @media (max-width: 768px) {
   .navbar {
-    position: relative;
+    position: sticky;
+    top: 0;
   }
 
-  /* Burger icon */
   .nav-burger {
     display: flex;
     flex-direction: column;
@@ -234,6 +252,7 @@ ul li img {
     cursor: pointer;
     z-index: 20;
   }
+
   .nav-burger span {
     display: block;
     width: 100%;
@@ -243,32 +262,31 @@ ul li img {
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
-  /* Stack the nav as a column */
-  ul {
+  .navbar ul {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
     height: auto;
     padding: 0;
   }
 
-  /* Logo stays visible in its own row */
   .nav-logo {
-    margin-right: 0;
-    padding: 8px 20px;
+    padding: 12px 20px;
+    height: 70px;
+    box-sizing: border-box;
   }
 
-  /* Cancel the desktop centering tricks */
-  .nav-item:nth-child(2) { margin-left: 0; }
-  .nav-item:nth-child(5) { margin-right: 0; }
-  .nav-button { margin-left: 0; }
-
-  /* Hide menu items until the burger is toggled */
   .nav-item,
   .nav-button {
     display: none;
     width: 100%;
     padding: 0;
-    text-align: center;
+    text-align: left;
+  }
+
+  .nav-toggle:checked ~ ul {
+    background-color: #2D1218;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .nav-toggle:checked ~ ul .nav-item,
@@ -276,26 +294,24 @@ ul li img {
     display: block;
   }
 
+  .nav-item a {
+    padding: 14px 24px;
+    display: block;
+    border-radius: 0;
+  }
+
   .nav-button {
-    padding: 12px 20px;
+    padding: 16px 24px 8px 24px;
   }
 
-  ul li a {
-    padding: 12px 20px;
-  }
-
-  ul li img {
-    width: 40px;
-    height: 40px;
-  }
-
-  /* Animate burger into an X when open */
   .nav-toggle:checked ~ .nav-burger span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
+
   .nav-toggle:checked ~ .nav-burger span:nth-child(2) {
     opacity: 0;
   }
+
   .nav-toggle:checked ~ .nav-burger span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
