@@ -82,6 +82,54 @@ ul li img {
   object-fit: contain;
 }
 
+.nav-item a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.nav-item a:hover {
+  opacity: 0.8;
+}
+
+.subtitle-pink {
+  color: #e28f99;
+  font-size: 18px;
+  margin: 0 0 8px;
+  font-family: monospace;
+}
+
+.primary-btn {
+  background-color: #C82333;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.default-btn {
+  background-color: #340E13;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Detail Teks Logo */
 .logo-text {
   font-size: 20px; 
   font-weight: 700;
@@ -190,7 +238,6 @@ ul li img {
   max-width: 1000px;
   margin: 0 auto;
 }
-
 /* Base Card untuk Logo / Teks Community */
 .support-card {
   background-color: #ffffff;
